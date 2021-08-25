@@ -14,18 +14,24 @@ namespace HeroAssembler
             }
 
             // passing parameter to constructor
-            Alliance avengers = new Alliance("Avengers");
+            Alliance<Hero> avengers = new Alliance<Hero>("Avengers");
             Console.WriteLine($"Named Alliance: {avengers.Name}");
 
             //call a methods on the class instance
             avengers.Assemble();
 
+            //add a hero to the Avengers
+            avengers.AddAHero(new Hero() { Name = "Hawkeye" });
+
+            // a method to list all heroes
+            avengers.ListAllHeroes();
+
             // using the object initializer 
-            Alliance namedWithInitializerAlliance = new Alliance() { Name = "Justice League" };
+            Alliance<Hero> namedWithInitializerAlliance = new Alliance<Hero>() { Name = "Justice League" };
             Console.WriteLine($"Initializer Alliance: {namedWithInitializerAlliance.Name}");
 
             //relying on the default name in the overload of the constructor with no params
-            Alliance unknownAlliance = new Alliance();
+            Alliance<Hero> unknownAlliance = new Alliance<Hero>();
             Console.WriteLine($"Unknown Alliance: {unknownAlliance.Name}");
 
 
