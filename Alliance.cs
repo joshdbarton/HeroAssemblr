@@ -47,17 +47,6 @@ namespace HeroAssembler
                 Console.WriteLine(hero.Name);
             }
         }
-        //write a method that creates a team, and adds the teams to the Alliance's teams
-        public void AddaTeam(Team team)
-        {
-            _teams.Add(team);
-        }
-
-
-        //write a methods that deploys a team on a mission
-        //write a method to list all active missions
-        //write a method to complete a mission
-
 
         public void Assemble()
         {

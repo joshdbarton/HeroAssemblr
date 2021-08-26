@@ -37,7 +37,6 @@ namespace HeroAssembler
             avengers.AddaHero(tonyStark);
             avengers.AddaHero(hawkeye);
             avengers.ListAllHeroes();
-            //avengers.MakeaTeam();
 
             #endregion
         }
