@@ -6,5 +6,14 @@ namespace HeroAssembler.Models
     {
         public string Name { get; set; }
         public List<Hero> Members { get; set; }
+
+        public int TeamSize
+        {
+            get
+            {
+                return Members.Count;
+            }
+        }
     }
+
 }
