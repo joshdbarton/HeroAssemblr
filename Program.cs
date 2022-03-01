@@ -17,8 +17,24 @@ namespace HeroAssembler
             Alliance avengers = new Alliance("Avengers");
             Console.WriteLine($"Named Alliance: {avengers.Name}");
 
+            avengers.AddHero(new Hero
+            {
+                Name = "Iron Man"
+            });
+            avengers.AddHero(new Hero
+            {
+                Name = "Thor"
+            });
+            avengers.AddHero(new Hero
+            {
+                Name = "Ant-Man"
+            });
+
+            avengers.ListAllianceHeroes();
+
             //call a methods on the class instance
             avengers.Assemble();
+            avengers.Assemble("Get together");
 
             // using the object initializer 
             Alliance namedWithInitializerAlliance = new Alliance() { Name = "Justice League" };
